@@ -8,4 +8,4 @@
         result
         (iter (next a)
               (+ (term a) result))))
-  (iter a (term a)))
+  (iter a 0))
