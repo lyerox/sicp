@@ -5,7 +5,6 @@
       (combiner (term a)
                 (accumlate combiner null-value term (next a) next b))))
 
-
 (define (sum term a next b)
   (accumlate + 0 term a next b))
 
@@ -13,3 +12,10 @@
   (accumlate * 1 term a next b))
 
 ;;iterable procedure version
+(define (accumlate combiner null-value term a next b)
+  (define (iter a result)
+    (if (> a b)
+        result
+        (iter (next a)
+              (combiner (term a) result))))
+  (iter a null-value))
