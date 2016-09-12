@@ -24,6 +24,7 @@
 
 (define (rabin-prime? n times)
   (cond
+   ((< n 2) #f)
    ((= times 0) #t)
    ((Miller-Rabin-test n)
     (rabin-prime? n (sub1 times)))
