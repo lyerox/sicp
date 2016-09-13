@@ -14,8 +14,8 @@
     (if (= i 1)
         result
         (iter (sub1 i)
-              (/ (N i)
-                 (+ (D i) result)))))
+              (/ (N (sub1 i))
+                 (+ (D (sub1 i)) result)))))
   (iter k (/ (N k) (D k))))
 
 ;;use con-frac to define golden-ration
