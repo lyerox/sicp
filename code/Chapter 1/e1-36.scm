@@ -28,3 +28,6 @@
 
 (define (formula x)
   (/ (log 1000) (log x)))
+
+;;test
+(fixed-point formula 1.1)
