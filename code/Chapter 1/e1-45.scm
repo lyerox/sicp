@@ -30,3 +30,16 @@
      1.0)))
 
 ;;shou nian conditions
+(define (lg n)
+  (cond
+   ((> (/ n 2) 1)
+    (add1 (lg (/ n 2))))
+   ((< (/ n 2) 1)
+    0)
+   (else
+    1)))
+
+;;define final answer to the excecise for get-nt-root of something
+
+(define (nth-root n)
+  (damped-nth-root n (lg n)))
