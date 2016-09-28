@@ -27,7 +27,9 @@
 
 ;;Nested Mapping are also useful for sequences other than those that enumerate intervals.
 ;;Suppose we wish to generate all the permutations of a set S
-;;For each item x in S, recursively generate the sequence of permulations of S - x, and adjoin x to the front of each one.This yields, for each x in S, the sequence of permutaations of S that begin with x.
+;;For each item x in S, recursively generate the sequence of permulations of S - x, and
+;;adjoin x to the front of each one.This yields, for each x in S, the sequence of permut-
+;;-ations of S that begin with x.
 ;;Combining these sequences for all x gives all the permutations of S:
 (define (permutations s)
   (if (null? s)
