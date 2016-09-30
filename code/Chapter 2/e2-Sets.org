@@ -1,0 +1,4 @@
+* Representing Sets
+** define "set" by specifying the operations that are to be used on sets.
+ union-set, intersetion-set, element-of-set? and adjoin-set.
+** Sets as unsorted lists
