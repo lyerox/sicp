@@ -33,16 +33,80 @@
         (else (set-front-ptr! queue (cdr (front-queue queue)))
               queue)))
 
-;;3.22 exercise
+;;3.22 exercise bn
 (define (make-queue)
   (let ((front-ptr '())
         (rear-ptr '()))
     ;;<definitions of internal procedures
-    (define empty-queue?
+    (define (empty-queue?)
       (null? front-ptr))
-    (define front-queue
-      (if empty-queue?
-          (error "FRONT called with an empty queue" front-queue)
-          (car front-ptr)))
     (define (insert-queue! item)
-      (let ((new-pair (cons item '())))))))
+      (let ((new-pair (cons item '())))
+        (cond ((empty-queue?) (set! front-ptr new-pair)
+                            (set! rear-ptr new-pair)
+                            front-ptr)
+              (else (set-cdr! rear-ptr new-pair)
+                    (set! rear-ptr new-pair)
+                    front-ptr))))
+    (define (delete-queue!)
+      (cond ((empty-queue?)
+             (display "DELETE called with an empty queue")
+             (newline))
+            (else (set! front-ptr (cdr front-ptr))
+                  front-ptr)))
+    (define (dispatch m)
+      (cond ((eq? m 'empty-queue?) (empty-queue?))
+            ((eq? m 'insert-queue!) insert-queue!)
+            ((eq? m 'delete-queue!) (delete-queue!))
+            (else (error "Unknown operation --DISPATCH" m))))
+    dispatch))
+;;3.23 deque
+
+(define (make-deque)
+  (let ([front-ptr '()]
+        [rear-ptr '()])
+    (define (empty-deque?)
+      (null? front-ptr)
+    (define (front-deque)
+      (cond ((empty-deque?)
+             '())
+            (else (car front-ptr))))
+    (define (real-deque)
+      (cond ((null? rear-ptr)
+             (front-queue))
+            (else (cdr rear-ptr))))
+    (define (front-insert-deque! item)
+      (let ((newpair (cons item '())))
+        (cond ((empty-deque?)
+               (set! front-ptr newpair)
+               (set! rear-ptr (cdr newpair))
+               front-ptr)
+              (else
+               (set-cdr! newpair (front-deque))
+               (set! front-ptr newpair)
+               front-ptr))))
+    (define (rear-insert-deque! item)
+      (let ((newpair (cons item '())))
+        (cond ((empty-deque?)
+               (set! front-ptr newpair)
+               (set! rear-ptr newpair)
+               front-ptr)
+              (else
+               (set-cdr! (real-deque) newpair)
+               (set! rear-ptr newpair)
+               front-ptr))))
+    (define (front-delete-deque!)
+      (cond ((empty-deque?)
+             (display "error delete on an empty deque")
+             (newline))
+            (else
+             (set! front-ptr (cdr (front-queue)))
+             front-ptr)))
+    (define (rear-delete-deque!)
+      (cond ((empty-deque?)
+             (display "error delete on an empty deque")
+             (newline)
+             (else
+              (set)))))
+
+
