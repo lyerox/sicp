@@ -60,4 +60,3 @@
             ((eq? m 'delete-queue!) (delete-queue!))
             (else (error "Unknown operation --DISPATCH" m))))
     dispatch))
-;;3.23 deque
