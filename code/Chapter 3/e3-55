@@ -1,3 +1,0 @@
-(define (partial-sums s)
-	(cons-stream (car s) (stream-map (lambda (x, y) (+ x y)) stream (cdr s)))
-)

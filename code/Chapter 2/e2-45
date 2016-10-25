@@ -1,8 +1,0 @@
-(define (split painter first second) 
-	(let 
-		((smaller (split painter first second)))
-    (first painter (second smaller smaller))
-  )
-)
-
-(define up-split (split below beside))

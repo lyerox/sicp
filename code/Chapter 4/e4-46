@@ -1,1 +1,0 @@
-; if it evaluate from right to left, maybe it will create infinite loop while evaluate right operand

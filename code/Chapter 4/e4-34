@@ -1,8 +1,0 @@
-(define (user-print L)
-	(if (infinite? L)
-		(display "try to display infinite object")
-		(if (not (null? L))
-			(begin (display (actual-value (car L))) (user-print (cdr L)))
-		)
-	)
-)

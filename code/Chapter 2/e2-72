@@ -1,3 +1,0 @@
-; O(1) to encode the most frequent symbol
-
-; O(logn) to encode the least frequent symbol

@@ -1,3 +1,0 @@
-(rule (last-pair ?x ()))
-
-(rule (last-pair (?u . ?v) ?v))

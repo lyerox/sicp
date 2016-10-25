@@ -1,6 +1,0 @@
-(define (list . args)
-	(if (null? args)
-		'()
-		(cons (car args) (list (cdr args)))
-	)
-)

@@ -1,1 +1,0 @@
-; if we use set!, the result will always be (x x 1)

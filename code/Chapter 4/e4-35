@@ -1,6 +1,0 @@
-(define (an-integer-between start end)
-	(if (> start end)
-		(amb)
-		(amb start (an-integer-between (+ start 1) end))
-	)
-)

@@ -1,1 +1,0 @@
-; if we don't initialize proc, it will make delay longer than we expect.

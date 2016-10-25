@@ -1,1 +1,0 @@
-; same strategy as lazy evaluator, just eval the value if we must use it
