@@ -1,0 +1,19 @@
+* Metalinguistic Abstraction
+** Concepts
+
+** 4.1 The Metacircular Evaluator
+
+However, evaluation is a process, so it is appropriate to describe the evaluati-
+on process using Lisp, which, after all, is our tool for describing processes.
+An evaluator that is written in the same language that it evaluates is said to be
+metacircular.
+The metacircular evaluator is essentially a Scheme formulation of the environment
+model of evaluation.
+That the model has two basic parts:
+
+1. To evaluate a combination(a compound expression other than a special form), evalute the subexpressions and then apply the value  of the operator subexpression to the value of the operand subexpressions.
+2. To apply a compound procedure to a set of arguments, evaluate the body of the procedure in a new environment. To construct this environment, extend the environment part of the procedure object by a frame in which the formal parameters of the procedure are bound to the arguments to which the procedure is applied.
+3. d
+
+
+

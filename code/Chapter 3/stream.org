@@ -1,0 +1,49 @@
+* Stream
+*** what?
+An alternative approach to modeling state, based on data structure called streams.
+**** drawback
+question of modular and more easily maintainded systems
+**** good feature
+avoid the drawbacks inherent in introducing assignment.
+*** why?
+As we shall see, streams can mitigate some of the complexity of modeling state.
+Must we make the model change with time in order to model phenomena in a changing world? Think about
+the issue in terms of mathmatical functions. We can describe the time-varying behavior of a quantity
+x as a function of time x(t). If we concentrate on x instant by instant, we think of it as a chang-ing
+quantity. Yet if we concentrate on the entire time history of values, we do not emphasize change-their
+function itself does not change
+
+*** how?
+**** *delayed evaluation*
+* Streams Are Delayed Lists
+
+* Implement delay and force
+* Infinite Streams
+* Exloiting the Stream Paradigm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
